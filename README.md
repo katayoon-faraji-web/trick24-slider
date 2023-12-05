@@ -1,5 +1,5 @@
 # trick24-slider
-- [Demo Project](https://katayoon-faraji-web.github.io/trick23-mousemove/)
+- [Demo Project](https://katayoon-faraji-web.github.io/trick24-slider/)
 
 - Developed by katayoon faraji
 
