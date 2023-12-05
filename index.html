@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="icon/font/bootstrap-icons.min.css">
+    <style>
+        .circle{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid white;
+            margin: 0px 5px;
+            cursor: pointer;
+        }
+        #list{
+            background-color: rgba(0, 0, 0, 0.297);
+        }
+    </style>
+    
+</head>
+<body>
+    <main class="w-full h-[100vh] bg-slate-200 flex justify-center items-center">
+        <section id="main_box" class="w-[600px] h-[500px] border relative overflow-hidden">
+            <section id="carousel" class="transition-all duration-1000 h-full flex absolute left-0 top-0 border">
+                <img class="w-[600px] object-cover transition-all duration-1000" src="img/1.webp" alt="">
+                <img class="w-[600px] object-cover transition-all duration-1000" src="img/2.jpg" alt="">
+                <img class="w-[600px] object-cover transition-all duration-1000" src="img/3.jpg" alt="">
+                <img class="w-[600px] object-cover transition-all duration-1000" src="img/4.jpg" alt="">
+                <img class="w-[600px] object-cover transition-all duration-1000" src="img/5.jpg" alt="">
+                <img class="w-[600px] object-cover transition-all duration-1000" src="img/6.jpg" alt="">
+            </section>
+            <span  id="right" class="absolute top-[45%] right-0 cursor-pointer"><i class="bi bi-arrow-right-circle text-[30px] "></i></span>
+            <span  id="left" class="absolute top-[45%] left-0 cursor-pointer"><i class="bi bi-arrow-left-circle text-[30px] "></i></span>
+            <ul id="list" class="w-full flex justify-center items-center absolute left-0 bottom-0 border h-[40px]"></ul>
+        </section>
+        
+    </main>
+    
+
+    <!-- <script>
+        let _box = document.getElementById('main_box')
+        let _carousel = document.getElementById('carousel')
+        let _imgs = document.querySelectorAll('#carousel>img')
+        let _right = document.getElementById('right')
+        let _left = document.getElementById('left')
+        let _list = document.getElementById('list')
+        let img_len = _imgs.length
+        console.log(img_len);
+        _carousel.style.width = ((img_len)*600)+'px'
+        let turn = 0
+
+        _imgs.forEach((val)=>{
+            let _circle = document.createElement('li')
+            _circle.classList.add('circle')
+            _list.appendChild(_circle)
+        })
+        let _lis = document.querySelectorAll('#list>li')
+        
+        _lis.forEach((val , i)=>{
+            val.addEventListener('click',(e)=>{
+                _lis.forEach((x)=>{
+                    x.style.background = 'transparent'
+                })
+                e.target.style.background = 'white'
+                turn = i
+                _carousel.style.left = -(turn*600)+'px'
+            })
+        })
+        _lis[turn].style.background = 'white'
+        _right.addEventListener('click',(e)=>{
+            if(turn < (img_len-1)){
+                turn++
+                _carousel.style.left = -(turn*600)+'px'
+            }
+            check_li()
+            check_right()
+            check_left()
+        })
+
+        _left.addEventListener('click',(e)=>{
+            if(turn > 0){
+                turn--
+                _carousel.style.left = -(turn*600)+'px'
+            }
+            check_li()
+            check_left()
+            check_right()
+        })
+
+        function check_right(){
+            if(turn==img_len-1){
+                _right.style.opacity = 0
+            }
+            else{
+                _right.style.opacity = 1
+            }
+        }
+        function check_left(){
+            if(turn==0){
+                _left.style.opacity = 0
+            }
+            else{
+                _left.style.opacity = 1
+            }
+        }
+        function check_li(){
+            _lis.forEach((x)=>{
+                x.style.background = 'transparent'
+            })
+            _lis[turn].style.background = 'white'
+        }
+
+
+    </script> -->
+</body>
+<script src="js/js.js"></script>
+</html>
